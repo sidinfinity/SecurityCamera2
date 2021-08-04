@@ -1,4 +1,4 @@
-Object Detection with the RaspberryPi
+# Object Detection with the RaspberryPi
  This project is a continuation of my Security Camera github repo. I decided to use tensorflow's object detection api instead of Nanonets because Nanonets was slow so I couldn't get the livestream working.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
