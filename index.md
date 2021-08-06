@@ -7,7 +7,7 @@
 
 # Second Milestone
 
-For my second milestone, I made a second model that can determine if the face detected by the object detection model is me, or not. I used tensorflow's Sequential model to do this. The sequential model is a stack of linear layers. It's one of the simplest models that keras has, you can add different types of layers such as Convolutional Layers, MaxPooling Layers, Dense Layers, etc. Each layer has exactly 1 input and 1 output. 
+For my second milestone, I made a second model that can determine if the face detected by the object detection model is me, or not. I used tensorflow's Sequential model to do this. The sequential model is a stack of linear layers. It's one of the simplest models that keras has, you can add different types of layers such as Convolutional Layers, MaxPooling Layers, Dense Layers, etc. Each layer has exactly 1 input and 1 output. I used transfer learning and used VGG16's architecure to train my model. VGG16 is a CNN architecture used to win the ILSVR competitoin in 2014. To get my dataset, I made a python script that takes 50 pictures of me. Then I used augmentation to generate even more images. 
 
 ![image](https://user-images.githubusercontent.com/56204136/128520933-c1e76610-6475-4fd8-9b80-c5cd0373da74.png)
 
