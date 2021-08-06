@@ -3,7 +3,9 @@
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Siddharth M | Current Highschool | Electrical Engineering | Incoming Senior
+| Siddharth M | American Highschool | CS/AI | Incoming Freshman
+
+# Second Milestone
   
 # First Milestone
 
