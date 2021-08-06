@@ -7,7 +7,29 @@
 
 # Second Milestone
 
-For my second milestone, I made a second model that can determine if the face detected by the object detection model is me, or not. I used tensorflow's Sequential model to do this. The sequential model is a stack of linear layers. It's one of the simplest models that keras has, you can add different types of layers such as Convolutional Layers, MaxPooling Layers, Dense Layers, etc. Each layer has exactly 1 input and 1 output. I used transfer learning and used VGG16's architecure to train my model. VGG16 is a CNN architecture used to win the ILSVR competitoin in 2014. To get my dataset, I made a python script that takes 50 pictures of me. Then I used augmentation to generate even more images. 
+For my second milestone, I made a second model that can determine if the face detected by the object detection model is me, or not. I used tensorflow's Sequential model to do this. The sequential model is a stack of linear layers. It's one of the simplest models that keras has, you can add different types of layers such as Convolutional Layers, MaxPooling Layers, Dense Layers, etc. Each layer has exactly 1 input and 1 output. I used transfer learning and used VGG16's architecure to train my model. VGG16 is a CNN architecture used to win the ILSVR competitoin in 2014. To get my dataset, I made a python script that takes 50 pictures of me. Then I used augmentation to generate even more images. I used keras's `ImageDataGenerator` to generate new images. 
+
+```
+aug = ImageDataGenerator(rotation_range=20, 
+                         width_shift_range=0.2, 
+                         height_shift_range=20,
+                         shear_range=0.2,
+                         zoom_range=0.2,
+                         horizontal_flip=True,
+                         fill_mode="nearest")
+j = 1
+for i in range(1, 50):
+  x = io.imread(f"/content/drive/MyDrive/faces/sid/{str(i)}.jpg")
+  x = x.reshape((1, ) + x.shape)
+  i = 0
+  for batch in aug.flow(x, batch_size=12,
+                         save_to_dir="/content/drive/MyDrive/faces/sid/",
+                         save_prefix='aug',
+                         save_format='jpg'):
+    i += 1
+    if i > 12:
+      break
+ ```
 
 ![image](https://user-images.githubusercontent.com/56204136/128520933-c1e76610-6475-4fd8-9b80-c5cd0373da74.png)
 
