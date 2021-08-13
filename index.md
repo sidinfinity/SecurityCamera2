@@ -13,7 +13,7 @@ For the final milestone, I finished the Security Camera! How it works is that wh
 
 For my second milestone, I made a second model that can determine if the face detected by the object detection model is me, or not. I used tensorflow's Sequential model to do this. The sequential model is a stack of linear layers. It's one of the simplest models that keras has, you can add different types of layers such as Convolutional Layers, MaxPooling Layers, Dense Layers, etc. Each layer has exactly 1 input and 1 output. I used transfer learning and used VGG16's architecure to train my model. VGG16 is a CNN architecture used to win the ILSVR competitoin in 2014. To get my dataset, I made a python script that takes 50 pictures of me. Then I used augmentation to generate even more images. I used keras's `ImageDataGenerator` to generate new images. 
 
-```
+``` Python
 aug = ImageDataGenerator(rotation_range=20, 
                          width_shift_range=0.2, 
                          height_shift_range=20,
