@@ -1,3 +1,4 @@
+
 # Object Detection with the RaspberryPi
  This project is a continuation of my Security Camera github repo. I decided to use tensorflow's object detection api instead of Nanonets because Nanonets was slow so I couldn't get the livestream working.
 
@@ -8,6 +9,8 @@
 # Third Milestone
 
 For the final milestone, I finished the Security Camera! How it works is that when a face is detected, It will play a sound, send a notification on my phone, and also save the image of the face locally on my computer. To make sure that I doesn't spam messages/notifications I only did this once every 10 seconds. To detect the face I used my old code that loads in a model and then runs each frame on the model. To send messages to my phone, I used twilio which is a python module that allows you to send messages with an api call. 
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/56204136/129370143-256e3216-56ea-427f-b75f-12f4c5a3f4aa.gif)
 
 # Second Milestone
 
